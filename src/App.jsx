@@ -33,7 +33,8 @@ function App() {
   const [appReady, setAppReady] = useState(false);
 
   useEffect(() => {
-    configBackEndBaseUrl('https://am-global-backend-5ni7.vercel.app/').then((response) => {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000/';
+    configBackEndBaseUrl(backendUrl).then((response) => {
       if (response.data.connected) {
         console.log('✅ Backend connected successfully');
         setAppReady(true);
