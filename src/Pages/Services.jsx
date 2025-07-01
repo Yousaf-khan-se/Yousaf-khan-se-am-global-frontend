@@ -13,17 +13,17 @@ import sec1Pic from '../assets/services/sec1/sec1Pic.png'
 import sec2Pic from '../assets/services/sec2/sec2Pic.png'
 import manPowerSupplyLogo from '../assets/homePageAssets/servicesLogo/manPowerSupplyLogo.png'
 import peoServicesLogo from '../assets/homePageAssets/servicesLogo/peoServicesLogo.png'
-import hrOutsourcingLogo from '../assets/homePageAssets/servicesLogo/hrOutsourcingLogo.png'
+import hrOutsourcingLogo from '../assets/homePageAssets/servicesLogo/hrOutSourcingLogo.png'
 import itStaffingLogo from '../assets/homePageAssets/servicesLogo/itStaffingLogo.png'
 import payrollServicesLogo from '../assets/homePageAssets/servicesLogo/payrollServicesLogo.png'
-import recruitmentServicesLogo from '../assets/homePageAssets/servicesLogo/recruitmentServicesLogo.png'
+// import recruitmentServicesLogo from '../assets/homePageAssets/servicesLogo/recruitmentServicesLogo.png'
 
 
 // sec3 assets
 import sec3BgPattern from '../assets/services/sec3/sec3BgPattern.png'
 
 // sec4 assets
-import sec4BgPattern from '../assets/services/sec4/sec4BgPattern.png'
+// import sec4BgPattern from '../assets/services/sec4/sec4BgPattern.png'
 import sec4Pic from '../assets/services/sec4/sec4Pic.png'
 import { useNavigate } from 'react-router-dom'
 

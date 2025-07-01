@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import sec0Bg from '../assets/jobFindSearchPage/sec0Bg.png'
-import sec1Bg from '../assets/jobFindSearchPage/sec1Bg.png'
-import searchIcon from '../assets/jobFindSearchPage/searchIcon.png'
-import locationIcon from '../assets/jobFindSearchPage/locationIcon.png'
+import sec0Bg from '../assets/JobFindSearchPage/sec0Bg.png'
+import sec1Bg from '../assets/JobFindSearchPage/sec1Bg.png'
+import searchIcon from '../assets/JobFindSearchPage/searchIcon.png'
+import locationIcon from '../assets/JobFindSearchPage/locationIcon.png'
 import JobCards from '../components/JobCards'
-import arrow from '../assets/jobFindSearchPage/arrow.png'
+import arrow from '../assets/JobFindSearchPage/arrow.png'
 import { Range } from 'react-range'
 
 const JobControlBtn = ({ text, handler, hid }) => {
