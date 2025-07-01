@@ -88,95 +88,118 @@ const Signup = () => {
 
                     {/* field div */}
                     <div className='py-5 flex flex-col justify-center items-start gap-4 text-black'>
-                        <div className='flex flex-row justify-start items-center gap-3 w-full'>
+                        <div className='flex flex-row justify-start items-center gap-y-3 gap-x-1 w-full'>
+                            <div className='w-1/2 flex'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <input
+                                    type="text"
+                                    name="firstName"
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                    placeholder='First Name'
+                                    className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                    required
+                                    disabled={loading}
+                                />
+                            </div>
+                            <div className='w-1/2 flex'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    placeholder='Last Name'
+                                    className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                    required
+                                    disabled={loading}
+                                />
+                            </div>
+                        </div>
+
+                        <div className='flex w-full'>
+                            <span className=' text-red-600 mr-1'>*</span>
                             <input
-                                type="text"
-                                name="firstName"
-                                value={formData.firstName}
+                                type="email"
+                                name="email"
+                                value={formData.email}
                                 onChange={handleChange}
-                                placeholder='First Name'
-                                className='rounded w-1/2 p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
-                                required
-                                disabled={loading}
-                            />
-                            <input
-                                type="text"
-                                name="lastName"
-                                value={formData.lastName}
-                                onChange={handleChange}
-                                placeholder='Last Name'
-                                className='rounded w-1/2 p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                placeholder='Email Address'
+                                className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
                                 required
                                 disabled={loading}
                             />
                         </div>
 
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder='Email Address'
-                            className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
-                            required
-                            disabled={loading}
-                        />
-
                         <div className='flex justify-start items-center gap-4 w-full'>
-                            <input
-                                type="password"
-                                name="password"
-                                value={formData.password}
-                                onChange={handleChange}
-                                placeholder='Password'
-                                className='rounded w-1/2 p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
-                                required
-                                minLength={6}
-                                disabled={loading}
-                            />
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                value={formData.confirmPassword}
-                                onChange={handleChange}
-                                placeholder='Confirm Password'
-                                className='rounded w-1/2 p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
-                                required
-                                disabled={loading}
-                            />
+                            <div className='w-1/2 flex'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    placeholder='Password'
+                                    className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                    required
+                                    minLength={6}
+                                    disabled={loading}
+                                />
+                            </div>
+
+                            <div className='w-1/2 flex'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <input
+                                    type="password"
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    placeholder='Confirm Password'
+                                    className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                    required
+                                    disabled={loading}
+                                />
+                            </div>
+
                         </div>
                         {passwordError && (
                             <p className="text-xs text-red-500">{passwordError}</p>
                         )}
 
                         <div className='flex justify-start items-center gap-4 w-full'>
-                            <select
-                                name="country"
-                                value={formData.country}
-                                onChange={handleChange}
-                                className='rounded w-1/2 p-[0.4rem] text-xs border border-white/10 bg-white/10 text-white'
-                                required
-                                disabled={loading}
-                            >
-                                <option value="" disabled className="bg-gray-800">Select Country</option>
-                                <option value="Pakistan" className="bg-gray-800">Pakistan</option>
-                                <option value="USA" className="bg-gray-800">United States</option>
-                                <option value="UK" className="bg-gray-800">United Kingdom</option>
-                                <option value="Canada" className="bg-gray-800">Canada</option>
-                                <option value="Australia" className="bg-gray-800">Australia</option>
-                                <option value="UAE" className="bg-gray-800">UAE</option>
-                                <option value="Other" className="bg-gray-800">Other</option>
-                            </select>
-                            <input
-                                type="tel"
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                placeholder='Phone Number'
-                                className='rounded w-1/2 p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
-                                required
-                                disabled={loading}
-                            />
+                            <div className='flex w-1/2'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <select
+                                    name="country"
+                                    value={formData.country}
+                                    onChange={handleChange}
+                                    className='rounded w-full p-[0.4rem] text-xs border border-white/10 bg-white/10 text-white'
+                                    required
+                                    disabled={loading}
+                                >
+                                    <option value="" disabled className="bg-gray-800">Select Country</option>
+                                    <option value="Pakistan" className="bg-gray-800">Pakistan</option>
+                                    <option value="USA" className="bg-gray-800">United States</option>
+                                    <option value="UK" className="bg-gray-800">United Kingdom</option>
+                                    <option value="Canada" className="bg-gray-800">Canada</option>
+                                    <option value="Australia" className="bg-gray-800">Australia</option>
+                                    <option value="UAE" className="bg-gray-800">UAE</option>
+                                    <option value="Other" className="bg-gray-800">Other</option>
+                                </select>
+                            </div>
+                            <div className='flex w-1/2'>
+                                <span className=' text-red-600 mr-1'>*</span>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    placeholder='Phone Number'
+                                    className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                                    required
+                                    disabled={loading}
+                                />
+                            </div>
                         </div>
 
                         <input
@@ -185,11 +208,11 @@ const Signup = () => {
                             value={formData.jobTitle}
                             onChange={handleChange}
                             placeholder='Current Job Title'
-                            className='rounded w-full p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
+                            className='ml-3 rounded w-[98%] p-[0.4rem] placeholder:text-xs text-sm border border-white/10 bg-white/10 text-white'
                             disabled={loading}
                         />
 
-                        <div className='w-full'>
+                        <div className='ml-3 w-[98%]'>
                             <label className='text-xs text-white font-light mb-1 block'>Select your primary area of interest</label>
                             <select
                                 className='rounded w-full p-[0.4rem] text-xs border border-white/10 bg-white/10 text-white'
@@ -206,7 +229,7 @@ const Signup = () => {
                         </div>
                     </div>
 
-                    <div className='relative'>
+                    <div className='relative ml-4'>
                         <input
                             type="checkbox"
                             id='privacy'
@@ -253,11 +276,11 @@ const Signup = () => {
                         <button
                             type='submit'
                             disabled={loading}
-                            className='bg-gradient-to-r from-[#D5BB54]/90 to-[#977619] bg-[#977619] hover:bg-black py-2 md:w-[34vw] w-[89vw] text-xs rounded-full transition-all disabled:opacity-60 disabled:cursor-not-allowed'
+                            className='ml-3 bg-gradient-to-r from-[#D5BB54]/90 to-[#977619] bg-[#977619] hover:bg-black py-2 md:w-[33vw] w-[89vw] text-xs rounded-full transition-all disabled:opacity-60 disabled:cursor-not-allowed'
                         >
                             {loading ? 'Signing up...' : 'Sign Up'}
                         </button>
-                        <p className="text-xs text-white/70">
+                        <p className="text-xs text-white/70 md:ml-0 ml-5">
                             Already have an account? &nbsp;
                             <Link to="/login" className={`text-[#D5BB54] hover:underline ${loading ? 'pointer-events-none opacity-50' : ''}`}>Login here</Link>
                         </p>
